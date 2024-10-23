@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+    margin: 2%;
+    background-color: lightblue;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lightpink;
+    height: 300px;
+    padding: 4px 0;
+}
+
+.form-styling {
+    display: flex;
+    padding: 2%;
+}
+
+.col-sm-5 {
+    padding: 0 4px;
+}
+
+.padding-top {
+    padding-top: 1.3em;
+}
