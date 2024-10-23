@@ -32,7 +32,7 @@ deleteBtn.onclick = () => {
 }
 // ###css but its js
 // if page has a max-width of 425px aka mobile devices, change inner html of submit button
-// match media =  takes 1 paramater, a string.
+// match media = takes 1 paramater, a string.
 function init() {
     let query = window.matchMedia('(max-width: 425px)');
     if(query.matches) {
