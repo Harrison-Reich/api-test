@@ -1,5 +1,5 @@
-// This code is very linear and only can handle capturing, saving, and displaying 1 input request at a time
-// Need to make code more dynamic to handle multiple entries saved to local storage
+//  - This code is very linear and only can handle capturing, saving, and displaying 1 input request at a time
+//  - Need to make code more dynamic to handle multiple entries saved to local storage
 
 // define variables
 let firstName = document.getElementById("firstName");
@@ -9,7 +9,7 @@ let displayLastName = document.getElementById("displayLastName")
 const submitBtn = document.getElementById("submitBtn");
 const deleteBtn = document.getElementById("deleteBtn")
 
-// submit button
+// #submit button
 submitBtn.onclick = () => {
     console.log("Step 1: working - set items to local storage and populate client side")
     // save items to local storage
@@ -22,7 +22,7 @@ submitBtn.onclick = () => {
     deleteBtn.className = "btn btn-danger";
 }
 
-// delete client side content and reset html fields to empty
+// #delete client side content and reset html fields to empty
 deleteBtn.onclick = () => {
     console.log("Step 2: proper delete button to remove entry")
     displayFirstName.innerHTML = "",
@@ -30,3 +30,13 @@ deleteBtn.onclick = () => {
     deleteBtn.innerHTML = "",
     deleteBtn.className = "btn";
 }
+// ###css but its js
+// if page has a max-width of 425px aka mobile devices, change inner html of submit button
+// match media =  takes 1 paramater, a string.
+function init() {
+    let query = window.matchMedia('(max-width: 425px)');
+    if(query.matches) {
+        submitBtn.innerHTML = "Submit";
+    }
+}
+init();
